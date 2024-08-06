@@ -1,7 +1,14 @@
-import { Inter } from "next/font/google";
+import { Inter, Karantina, Jost, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const karantina = Karantina({
+  subsets: ["latin"],
+  weight: ['300', '400', '700'],
+  variable: '--font-karantina'
+});
+const jost = Jost({ subsets: ["latin"], variable: '--font-jost' });
+const josefinSans = Josefin_Sans({ subsets: ["latin"], variable: '--font-josefinSans' });
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +17,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <html lang="en" className={`${inter.variable} ${karantina.variable} ${jost.variable} ${josefinSans.variable}`}>
+      <body className={`${inter.className} ${karantina.className} ${jost.className} ${josefinSans.className}`}>
+      {children}
+      </body>
+      </html>
   );
 }
