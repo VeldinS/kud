@@ -1,4 +1,4 @@
-import { Inter, Karantina, Jost, Josefin_Sans } from "next/font/google";
+import { Inter, Karantina, Jost, Josefin_Sans, Limelight } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
@@ -7,6 +7,7 @@ const karantina = Karantina({
   weight: ['300', '400', '700'],
   variable: '--font-karantina'
 });
+const limelight = Limelight({ subsets: ["latin"], weight:['400'], variable:'--font-limelight'});
 const jost = Jost({ subsets: ["latin"], variable: '--font-jost' });
 const josefinSans = Josefin_Sans({ subsets: ["latin"], variable: '--font-josefinSans' });
 
@@ -17,8 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-      <html lang="en" className={`${inter.variable} ${karantina.variable} ${jost.variable} ${josefinSans.variable}`}>
-      <body className={`${inter.className} ${karantina.className} ${jost.className} ${josefinSans.className}`}>
+      <html lang="en" className={`${inter.variable} ${karantina.variable} ${jost.variable} ${josefinSans.variable} ${limelight.variable}`}>
+      <body className={`${inter.className} ${karantina.className} ${jost.className} ${josefinSans.className} ${limelight.variable}`}>
       {children}
       </body>
       </html>

@@ -17,6 +17,7 @@ module.exports = {
         karantina: ['var(--font-karantina)'],
         jost: ['var(--font-jost)'],
         josefinSans: ['var(--font-josefinSans)'],
+        limelight: ['var(--font-limelight)'],
       },
     },
   },
