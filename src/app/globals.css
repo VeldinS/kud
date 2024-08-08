@@ -19,7 +19,6 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #121212;
-  background-image: url("../assets/Background.svg");
 }
 
 @layer utilities {
