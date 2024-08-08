@@ -25,7 +25,7 @@ function Landing() {
 	return (
 		<section className={'relative w-screen h-screen flex flex-col items-center justify-center'}>
 			<h1
-				className={'fixed font-limelight text-[220px] transition-all transition-z-index duration-1000'}
+				className={'fixed font-limelight text-[60px] md:text-[120px] lg:text-[220px] text-center transition-all transition-z-index duration-1000'}
 				style={style}
 			>
 				1001 NOĆ
