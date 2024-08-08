@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Navlink from "@/components/navbar/Navlink";
 import Image from "next/image";
 import logo from "@/assets/logo.svg";
-import linkedinLogo from "@/assets/socials/linkedIn.svg";
 import facebookLogo from "@/assets/socials/facebook.svg";
 import instagramLogo from "@/assets/socials/instagram.svg";
 
