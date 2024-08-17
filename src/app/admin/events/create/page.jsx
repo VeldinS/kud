@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import {useState} from 'react';
 
 export default function NewEvent() {
     const [name, setName] = useState('');
@@ -44,27 +44,31 @@ export default function NewEvent() {
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Name:</label>
-                <input className={'text-black'} type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+                <input className={'text-black'} type="text" value={name} onChange={(e) => setName(e.target.value)}
+                       required/>
             </div>
             <div>
                 <label>Short Description:</label>
-                <textarea className={'text-black'} value={shortDescription} onChange={(e) => setShortDescription(e.target.value)} required />
+                <textarea className={'text-black'} value={shortDescription}
+                          onChange={(e) => setShortDescription(e.target.value)} required/>
             </div>
             <div>
                 <label>Description:</label>
-                <textarea className={'text-black'} value={description} onChange={(e) => setDescription(e.target.value)} required />
+                <textarea className={'text-black'} value={description}
+                          onChange={(e) => setDescription(e.target.value)} required/>
             </div>
             <div>
                 <label>Main Image:</label>
-                <input type="file" accept="image/*" onChange={(e) => setMainImage(e.target.files[0])} required />
+                <input type="file" accept="image/*" onChange={(e) => setMainImage(e.target.files[0])} required/>
             </div>
             <div>
                 <label>Other Images:</label>
-                <input type="file" accept="image/*" multiple onChange={(e) => setOtherImages([...e.target.files])} />
+                <input type="file" accept="image/*" multiple onChange={(e) => setOtherImages([...e.target.files])}/>
             </div>
             <div>
                 <label>Date:</label>
-                <input className={'text-black'} type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+                <input className={'text-black'} type="date" value={date} onChange={(e) => setDate(e.target.value)}
+                       required/>
             </div>
             <button type="submit">Create Event</button>
         </form>
