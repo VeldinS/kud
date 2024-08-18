@@ -1,8 +1,22 @@
 'use client';
 
 import {useState} from 'react';
+import {signOut} from "@/lib/supabase";
+import {useRouter} from "next/navigation";
 
 export default function NewEvent() {
+
+    const router = useRouter();
+
+    const handleLogout = async () => {
+        const { error } = await signOut();
+
+        if (!error) {
+            localStorage.removeItem('user');
+            router.push('/login');
+        }
+    };
+
     const [name, setName] = useState('');
     const [shortDescription, setShortDescription] = useState('');
     const [description, setDescription] = useState('');
